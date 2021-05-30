@@ -1,7 +1,41 @@
 footer{
     font-family: 'Poppins', sans-serif;
-    background-image: url('../../assets/photo-1464639351491-a172c2aa2911.jfif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: lighten($color: #020202, $amount: 5%);  
+    color: white;
+    padding: 20px 30px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+    }
+}
+.upper-footer{
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+    font-size: 14px;
+    padding: 20px 0;
+
+    i{
+        display: inline-block;
+        margin-right: 10px;
+
+    }
+    div{
+        width: 30%;
+    }
+    h2{
+        font-weight: normal;
+    }
+}
+div.address{
+    ul {
+        list-style: none;
+    }
+    li{
+        margin-top: 10px;
+    }
+}
+.lower-footer{
+    display: flex;
 }
