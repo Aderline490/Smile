@@ -1,18 +1,29 @@
 <div class="row">
-    <h2>Fill this form to raise the fund</h2>
+    <h2 class="title">Fill this form to raise the fund</h2>
     <p>Please rest assured that any means you will use to donate
         are safe and trustworthy. 
         For further information <a href="#" id="link">click here</a> <br>
         Fields with <span>*</span> are required</p>
 </div>
 <div class="form-row">
-    <form action="">
+    <form action="#" #donateForm="ngForm">
         <div class="field">
             <div>
-                <label for="names">Names<span>*</span></label>
+                <!-- <label for="names">Names<span>*</span></label> -->
             </div>
             <div>
-                <input type="text" class="text-line" id="names">
+                <input 
+                type="text" 
+                class="text-line" 
+                id="names" 
+                name="names"
+                [(ngModel)]="names"
+                #namesInput="ngModel"
+                required>
+
+                <div class="help is-error" *ngIf="namesInput.invalid && namesInput.touched">
+                    Your names are required.
+                </div>
             </div>
         </div>
         <div class="field">
@@ -20,7 +31,18 @@
                 <label for="phone">Phone Number<span>*</span></label>
             </div>
             <div>
-                <input type="tel" class="text-line" id="phone">
+                <input 
+                type="tel" 
+                class="text-line" 
+                id="phone" 
+                name="phone"
+                [(ngModel)]="phone"
+                #phoneInput="ngModel"
+                required>
+
+                 <div class="help is-error" *ngIf="phoneInput.invalid && phoneInput.touched">
+                    Your Phone Number is required.
+                </div>
             </div>
         </div>
         <div class="field">
@@ -28,7 +50,17 @@
                 <label for="email">Email</label>
             </div>
             <div>
-                <input type="email" class="text-line" id="email">
+                <input 
+                type="email" 
+                class="text-line" 
+                id="email" 
+                name="email"
+                [(ngModel)]="email"
+                #emailInput="ngModel">
+            </div>
+            
+             <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">
+                Invalid email.
             </div>
         </div>
         <div class="field">
@@ -36,7 +68,18 @@
                 <label for="amt">Amount<span>*</span></label>
             </div>
             <div>
-                <input type="number" class="text-line" id="amt">
+                <input 
+                type="number" 
+                class="text-line" 
+                id="amt" 
+                name="amount"
+                [(ngModel)]="amount"
+                #amtInput="ngModel"
+                required>
+            </div>
+
+             <div class="help is-error" *ngIf="amtInput.invalid && amtInput.touched">
+               The amount is required.
             </div>
         </div>
         <div class="field">
@@ -50,6 +93,13 @@
                 <div class="pay2">
                 </div>
             </div>
+        </div>
+        <div class="field">
+            <button 
+            type="submit"
+            class="button is-danger is-rounded is-link"
+            [disabled]="donateForm.invalid">
+            Donate</button>
         </div>
     </form>
 </div>
