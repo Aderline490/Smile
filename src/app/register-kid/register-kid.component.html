@@ -1,0 +1,124 @@
+<div class="row">
+    <h2 class="title is-3">Register Kid</h2>
+    <p>Fill this form to start registering kids in your orphanage.<br> Or if a new kid is joining the orphanage. 
+        Fields with <span>*</span> are required</p>
+</div>
+<div class="row">
+<h5 class="title is-5">General Characteristics</h5>
+</div>
+<div class="row">
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray; width:550px;margin-left:10px"> 
+</div>
+<hr>
+<div class="form-row">
+    <form action="#" #registerKid="ngForm">
+        <div class="container">
+            <div class="field">
+                <div>
+                    <label for="names" class="label">Names<span>*</span></label>
+                </div>
+                <div>
+                    <input 
+                    type="text" 
+                    class="text-line" 
+                    id="names" 
+                    name="names"
+                    [(ngModel)]="names"
+                    #namesInput="ngModel"
+                    required>
+
+                    <div class="help is-error" *ngIf="namesInput.invalid && namesInput.touched">
+                        The names are required
+                    </div>
+                </div>
+            </div>
+        
+        <div class="field">
+            <div>
+                <label for="gender" class="label">Gender<span>*</span></label>
+            </div>
+            <div>
+                <select
+                class="text-line"
+                id="gender"
+                name="gender"
+                [(ngModel)]="gender"
+                #genderInput="ngModel"
+                required>
+                    <option value=""></option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Custom">Custom</option>
+                </select>
+            </div>
+            <div class="help is-error" *ngIf="genderInput.invalid && genderInput.touched">
+                The gender is required
+            </div>
+        </div>
+        <div class="field">
+            <div>
+                <label for="dob" class="label">Date of Birth<span>*</span></label>
+            </div>
+            <div>
+                <input 
+                type="date" 
+                class="text-line"
+                id="dob" 
+                name="dob"
+                [(ngModel)]="dob"
+                #dobInput="ngModel"
+                required>
+
+                <div class="help is-error" *ngIf="dobInput.invalid && dobInput.touched">
+                    The Date of Birth is required
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <div>
+                <label for="country" class="label">Country<span>*</span></label>
+            </div>
+            <div>
+                <select
+                class="text-line"
+                id="country"
+                name="country"
+                [(ngModel)]="country"
+                #countryInput="ngModel"
+                required>
+                    <option value=""></option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="DRC">DRC</option>
+                </select>
+            </div>
+            <div class="help is-error" *ngIf="countryInput.invalid && countryInput.touched">
+                The country is required
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="desc">Description<span>*</span></label>
+            <textarea
+                name="desc"
+                id="desc"
+                class="textarea" 
+                [(ngModel)]="desc"
+                #descInput="ngModel"
+                required>
+            </textarea>
+        </div>
+        <div class="help is-error" *ngIf="descInput.invalid && descInput.touched">
+            The description is required
+        </div>
+        <div class="field">
+            <button 
+            type="submit"
+            class="button is-danger is-rounded is-link"
+            [disabled]="registerKid.invalid">
+           Register Kid</button>
+        </div>
+    </div>
+    </form>
+</div>

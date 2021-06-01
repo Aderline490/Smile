@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { DonateformComponent } from './donateform/donateform.component';
 import { DonateComponent } from './donate/donate.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterKidComponent } from './register-kid/register-kid.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     DonateformComponent,
     DonateComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterKidComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

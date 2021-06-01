@@ -1,5 +1,5 @@
 <div class="row">
-    <h2 class="title">Fill this form to raise the fund</h2>
+    <h3 class="title is-3">Fill this form to raise the fund</h3>
     <p>Please rest assured that any means you will use to donate
         are safe and trustworthy. 
         For further information <a href="#" id="link">click here</a> <br>
@@ -7,9 +7,12 @@
 </div>
 <div class="form-row">
     <form action="#" #donateForm="ngForm">
+        <div class="container">
+
+        
         <div class="field">
             <div>
-                <!-- <label for="names">Names<span>*</span></label> -->
+                <label for="names" class="label">Names<span>*</span></label>
             </div>
             <div>
                 <input 
@@ -28,7 +31,7 @@
         </div>
         <div class="field">
             <div>
-                <label for="phone">Phone Number<span>*</span></label>
+                <label for="phone" class="label">Phone Number<span>*</span></label>
             </div>
             <div>
                 <input 
@@ -47,7 +50,7 @@
         </div>
         <div class="field">
             <div>
-                <label for="email">Email</label>
+                <label for="email" class="label">Email</label>
             </div>
             <div>
                 <input 
@@ -65,7 +68,7 @@
         </div>
         <div class="field">
             <div>
-                <label for="amt">Amount<span>*</span></label>
+                <label for="amt" class="label">Amount<span>*</span></label>
             </div>
             <div>
                 <input 
@@ -84,10 +87,10 @@
         </div>
         <div class="field">
             <div>
-                <label for="amt">Mode of Payment<span>*</span></label>
+                <label for="amt" class="label">Mode of Payment<span>*</span></label>
             </div>
-            <div>
-                <button class="trans">Bank Transfer</button>
+            <div class="payments">
+                <button class="button is-rounded">Bank Transfer</button>
                 <div class="pay1">
                 </div>
                 <div class="pay2">
@@ -101,5 +104,6 @@
             [disabled]="donateForm.invalid">
             Donate</button>
         </div>
+    </div>
     </form>
 </div>
