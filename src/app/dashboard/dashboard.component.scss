@@ -1,0 +1,142 @@
+nav {
+  height: 70px;
+  width: 100%;
+  // background-color: #F5F5F5;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+
+  div {
+    display: inline-block;
+    position: relative;
+
+    span {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background-color: #ff0101;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 22px;
+    border-radius: 10px;
+    background-color: rgb(236, 236, 236);
+  }
+
+  li+li+li>a {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+main {
+  padding-left: 30px;
+  padding: 30px 15px 30px 30px;
+}
+
+div.search {
+  position: relative;
+  display: inline-block;
+
+  input {
+    border: 1px solid #707070;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: 0;
+  }
+  i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.pagination-cont{
+  display: flex;
+  justify-content: flex-end;
+  button{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100px;
+    padding: 4px;
+    font-size: 14px;
+  }
+  .filled{
+    background-color: black;
+    color: white;
+  }
+  div{
+    color: black;
+    border-radius: 20px;
+    border: 1px solid #ff0101;
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    font-size: 14px;
+    margin: 0px 10px;
+    span{
+      margin: 0px 15px;
+      color: lighten(#000,20%);
+    }
+    i:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+
+table{
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  border-collapse:separate;
+  border-spacing:0 15px;
+
+
+  td{
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+  }
+  td:first-of-type{
+    border-radius: 10px 0px 0px 10px;
+  }
+  td:last-of-type{
+    border-radius: 0px 10px 10px 0px;
+  }
+  .fa-check{
+    background-color: #30F15D;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .fa-sync-alt{
+    background-color: #0800FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
+
