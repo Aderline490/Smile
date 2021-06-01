@@ -2,14 +2,11 @@
     text-decoration: none;
     color: #FF0101;
 }
-h2{
-    font-size: 20px;
-}
 .row{
     margin: 3em 5em;
 }
 .form-row{
-    margin:50px auto;
+    margin: 50px auto;
     width: 40%;
     border-radius: 30px;
     box-shadow: 0px 0px 50px #ccc;
@@ -35,23 +32,15 @@ h2{
 label{
     font-size: 17px;
 }
-.payments{
-    margin-top: 20px;
+textarea{
+    border: 1px solid rgb(79, 79, 79);
+    border-radius: 10px;
 }
-.pay1{
-    display: inline-block;
-    background-image: url('../../assets/images/paypal.png');
-    width: 130px;
-    height: 125px;
-    background-color: yellow;
-    margin-left: 20px; 
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
 }
-.pay2{
-    display: inline-block;
-    background-image: url('../../assets/images/momo.png');
-    width: 135px;
-    height: 125px;
-    background-color: yellow;
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
 }
 .help{
     color: #FF0101;

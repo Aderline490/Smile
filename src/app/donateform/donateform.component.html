@@ -7,6 +7,9 @@
 </div>
 <div class="form-row">
     <form action="#" #donateForm="ngForm">
+        <div class="container">
+
+        
         <div class="field">
             <div>
                 <label for="names">Names<span>*</span></label>
@@ -86,8 +89,8 @@
             <div>
                 <label for="amt">Mode of Payment<span>*</span></label>
             </div>
-            <div>
-                <button class="trans">Bank Transfer</button>
+            <div class="payments">
+                <button class="button is-rounded">Bank Transfer</button>
                 <div class="pay1">
                 </div>
                 <div class="pay2">
@@ -101,5 +104,6 @@
             [disabled]="donateForm.invalid">
             Donate</button>
         </div>
+    </div>
     </form>
 </div>
