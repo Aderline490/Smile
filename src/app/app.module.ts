@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DonateformComponent } from './donateform/donateform.component';
 import { DonateComponent } from './donate/donate.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DonateComponent } from './donate/donate.component';
     NavbarComponent,
     FooterComponent,
     DonateformComponent,
-    DonateComponent
+    DonateComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
