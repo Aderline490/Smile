@@ -1,7 +1,6 @@
 nav {
   height: 70px;
   width: 100%;
-  // background-color: #F5F5F5;
   background-color: rgb(236, 236, 236);
   display: flex;
   justify-content: space-between;
@@ -9,10 +8,15 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
-
-  div {
+  img{
+    width: 100px;
+    height: auto;
+  }
+  div:not(.menu-options,.notifications) {
     display: inline-block;
     position: relative;
+    color: black;
+    cursor: pointer;
 
     span {
       display: inline-block;
@@ -34,7 +38,7 @@ ul {
   justify-content: space-between;
   align-items: center;
 
-  a {
+  a, .orph-name {
     text-decoration: none;
     color: black;
     font-size: 14px;
@@ -44,8 +48,63 @@ ul {
     background-color: rgb(236, 236, 236);
   }
 
-  li+li+li>a {
+  .orph-name{
     font-family: 'Poppins', sans-serif;
+  }
+  .orph-name:hover{
+    cursor: pointer;
+  }
+}
+
+div.menu-options{
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 20px 15px;
+  border-radius: 5px;
+  position: absolute;
+  right: 45px;
+  top: 50px;
+  width: 190px;
+  box-shadow: 0 2px 5px #707070;
+  ul{
+    flex-direction: column;
+    align-items: flex-start;
+    li:hover{
+      transition: .2s ease-in-out;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
+div.notifications{
+  width: 300px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #707070;
+  padding: 4px 7px;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  right: 280px;
+  transition: .4s ease;
+
+  div.top-not{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 10px;
+  }
+  .fa-check{
+    color: darken($color: #0800FF, $amount: 10%);
+    cursor: pointer;
+  }
+  p{
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid lighten($color: #707070, $amount: 10%);
   }
 }
 
@@ -112,6 +171,7 @@ table{
   width: 100%;
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 50px;
   border-collapse:separate;
   border-spacing:0 15px;
 

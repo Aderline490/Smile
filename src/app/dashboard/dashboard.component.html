@@ -1,25 +1,29 @@
-<nav>
-  <h1>Logo</h1>
+<nav id="nav">
+  <img src="../../assets/logowhite.PNG" alt="" srcset="">
   <ul>
     <li>
       <a href="">
         <i class="fas fa-pen"></i>
       </a>
     </li>
-    <li>
-      <a href="">
+    <li (click)="handleShowNotification()">
         <div>
             <span></span>
             <i class="fas fa-bell"></i>
         </div>
-      </a>
     </li>
-    <li>
-      <a href="">
+    <li class="orph-name" (click)="handleOrphNameClick()">
         ORPHAN CARE CENTER <i class="fas fa-chevron-down"></i>
-      </a>
     </li>
   </ul>
+  <div class="menu-options" *ngIf="showMenuOptions">
+    <ul>
+      <li>Register Child</li>
+      <li>Change Password</li>
+      <li>Logout</li>
+    </ul>
+  </div>
+  
 </nav>
 <main>
     <div class="search">
@@ -66,6 +70,16 @@
           <td> Lynda Smith </td>
           <td> 1 </td>
           <td> +250 788 695 515 </td>
+          <td> <i class="fas fa-sync-alt"></i> </td>
+          <td> <i class="fas fa-ellipsis-v"></i></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>25 April 2021</td>
+          <td> Gashugi Adeline </td>
+          <td> Lynda Smith </td>
+          <td> 1 </td>
+          <td> +250 788 695 515 </td>
           <td> <i class="fas fa-check"></i> </td>
           <td> <i class="fas fa-ellipsis-v"></i></td>
         </tr>
@@ -89,6 +103,25 @@
           <td> <i class="fas fa-sync-alt"></i> </td>
           <td> <i class="fas fa-ellipsis-v"></i></td>
         </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>25 April 2021</td>
+          <td> Gashugi Adeline </td>
+          <td> Lynda Smith </td>
+          <td> 1 </td>
+          <td> +250 788 695 515 </td>
+          <td> <i class="fas fa-check"></i> </td>
+          <td> <i class="fas fa-ellipsis-v"></i></td>
+        </tr>
       </tbody>
     </table>
+    <div class="notifications" *ngIf="showNotifications" >
+      <div class="top-not">
+        <span>Notifications</span>
+        <i class="fas fa-check" title="Mark all as read"></i>
+      </div>
+      <p> Richard wants a kid called Mugwaneza. </p>
+      <p> There was a login attempt on your account. </p>
+    </div>
 </main>
+<app-footer></app-footer>
