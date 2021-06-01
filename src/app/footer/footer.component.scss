@@ -3,6 +3,7 @@ footer{
     background-color: lighten($color: #020202, $amount: 5%);  
     color: white;
     padding: 20px 30px;
+    position: relative;
     a{
         text-decoration: none;
         color: white;
@@ -25,9 +26,15 @@ footer{
         width: 30%;
     }
     h2{
-        font-weight: normal;
+        font-weight: 600;
+        font-size: 16px;
     }
 }
+// div.logo-text{
+//     img{
+//         height: 200px;
+//     }
+// }
 div.address{
     ul {
         list-style: none;
@@ -73,6 +80,22 @@ div.separator{
     border: 0;
     border-top: 1px solid #707070   ;
 }
+
+div.upwards{
+    background-color: #ff0101;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 150px;
+    i{
+        background-color: white;
+        color: #ff0101;
+        border-radius: 50%;
+        padding: 5px ;
+    }
+}
+
 .lower-footer{
     display: flex;
     justify-content: space-between;
@@ -80,7 +103,6 @@ div.separator{
     margin-top: 20px;
     div{
         display: flex;
-        // background-color: lightgreen;
         width: 25%;
         justify-content: space-between;
     }
