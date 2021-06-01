@@ -19,7 +19,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     DonateformComponent,
     DonateComponent,
     DashboardComponent,
-    RegisterKidComponent
+    RegisterKidComponent,
     HomePageComponent
   ],
   imports: [
