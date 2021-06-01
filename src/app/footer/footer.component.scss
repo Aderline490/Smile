@@ -3,15 +3,16 @@ footer{
     background-color: lighten($color: #020202, $amount: 5%);  
     color: white;
     padding: 20px 30px;
+    position: relative;
     a{
         text-decoration: none;
         color: white;
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 .upper-footer{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 200px;
     font-size: 14px;
     padding: 20px 0;
@@ -25,9 +26,15 @@ footer{
         width: 30%;
     }
     h2{
-        font-weight: normal;
+        font-weight: 600;
+        font-size: 16px;
     }
 }
+// div.logo-text{
+//     img{
+//         height: 200px;
+//     }
+// }
 div.address{
     ul {
         list-style: none;
@@ -36,6 +43,67 @@ div.address{
         margin-top: 10px;
     }
 }
+div.newsletter{
+    h2{
+        margin-bottom: 10px;
+    }
+    div{
+        width: 70%;
+        position: relative;
+        margin-top: 10px;
+    }
+    input{
+        height: 40px;
+        width: 100%;
+        border-radius: 10px;
+        outline: 0;
+        border: 0;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .fas{
+        padding: 5px 7px;
+        background-color: #ff0101;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    input::placeholder{
+        font-weight: normal;
+        font-size: 14px;
+        color: lighten($color: #000000, $amount: 25%) ;
+    }
+}
+
+div.separator{
+    border: 0;
+    border-top: 1px solid #707070   ;
+}
+
+div.upwards{
+    background-color: #ff0101;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 150px;
+    i{
+        background-color: white;
+        color: #ff0101;
+        border-radius: 50%;
+        padding: 5px ;
+    }
+}
+
 .lower-footer{
     display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 20px;
+    div{
+        display: flex;
+        width: 25%;
+        justify-content: space-between;
+    }
 }
