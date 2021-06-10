@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  showMenuOptions: boolean = false;
-  showListOptions: boolean = false;
+  hideMenuOptions: boolean = true;
+  hideListOptions: boolean = true;
   showNotifications: boolean = false;
 
   constructor() { }
@@ -17,10 +17,19 @@ export class DashboardComponent implements OnInit {
   }
 
   handleOrphNameClick() {
-    this.showMenuOptions = !this.showMenuOptions;
+    // this.hideMenuOptions = !this.hideMenuOptions;
+    if (this.hideMenuOptions) {
+      return this.hideMenuOptions = false
+    }else {
+      return this.hideMenuOptions = true
+    }
   }
   handleShowNotification() {
     this.showNotifications = !this.showNotifications;
   }
+  handleShowListOptions(div: any) {
+    div.hidden = !div.hidden;
+  }
+
 
 }

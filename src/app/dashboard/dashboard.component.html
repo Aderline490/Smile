@@ -6,122 +6,192 @@
         <i class="fas fa-pen"></i>
       </a>
     </li>
-    <li (click)="handleShowNotification()">
-        <div>
-            <span></span>
-            <i class="fas fa-bell"></i>
-        </div>
+    <li (click)="handleShowNotification()" class="notifications">
+      <div class="dropdown">
+        <span></span>
+        <a  href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fas fa-bell"></i>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li> Pending requests</li>
+          <li> <i class="fas fa-sync-alt"></i> Gashugi Adeline <span>3min</span></li>
+          <li> <i class="fas fa-sync-alt"></i> Gashugi Adeline <span>3min</span></li>
+          <li> View All</li>
+        </ul>
+      </div>
     </li>
-    <li class="orph-name" (click)="handleOrphNameClick()">
-        ORPHAN CARE CENTER <i class="fas fa-chevron-down"></i>
+    <li class="orph-name">
+      <div class="dropdown">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          ORPHAN CARE CENTER
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">All children</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+        </ul>
+      </div>
     </li>
   </ul>
-  <div class="menu-options" *ngIf="showMenuOptions">
-    <ul>
-      <li>Register Child</li>
-      <li>Change Password</li>
-      <li>Logout</li>
-    </ul>
-  </div>
-  
+
 </nav>
 <main>
-    <div class="search">
-        <input type="text" placeholder="Search Booking">
-        <i class="fas fa-search"></i>
+  <div class="search">
+    <input type="text" placeholder="Search Booking">
+    <i class="fas fa-search"></i>
+  </div>
+  <div class="pagination-cont">
+    <button class="filled">First</button>
+    <div>
+      <i class="fas fa-arrow-left"></i>
+      <span>1 of 24</span>
+      <i class="fas fa-arrow-right"></i>
     </div>
-    <div class="pagination-cont">
-      <button class="filled">First</button>
-      <div>
-        <i class="fas fa-arrow-left"></i>
-        <span>1 of 24</span>
-        <i class="fas fa-arrow-right"></i>
-      </div>
-      <button>Last</button>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th> <input type="checkbox" /></th>
-          <th> Request Date</th>
-          <th> Person's Name </th>
-          <th> Child's Name </th>
-          <th> Number of kids </th>
-          <th> Phone Number </th>
-          <th> Status </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="checkbox" /></td>
-          <td>25 April 2021</td>
-          <td> Gashugi Adeline </td>
-          <td> Lynda Smith </td>
-          <td> 1 </td>
-          <td> +250 788 695 515 </td>
-          <td> <i class="fas fa-check"></i> </td>
-          <td> <i class="fas fa-ellipsis-v"></i></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" /></td>
-          <td>25 April 2021</td>
-          <td> Gashugi Adeline </td>
-          <td> Lynda Smith </td>
-          <td> 1 </td>
-          <td> +250 788 695 515 </td>
-          <td> <i class="fas fa-sync-alt"></i> </td>
-          <td> <i class="fas fa-ellipsis-v"></i></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" /></td>
-          <td>25 April 2021</td>
-          <td> Gashugi Adeline </td>
-          <td> Lynda Smith </td>
-          <td> 1 </td>
-          <td> +250 788 695 515 </td>
-          <td> <i class="fas fa-check"></i> </td>
-          <td> <i class="fas fa-ellipsis-v"></i></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" /></td>
-          <td>25 April 2021</td>
-          <td> Gashugi Adeline </td>
-          <td> Lynda Smith </td>
-          <td> 1 </td>
-          <td> +250 788 695 515 </td>
-          <td> <i class="fas fa-sync-alt"></i> </td>
-          <td> <i class="fas fa-ellipsis-v"></i></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" /></td>
-          <td>25 April 2021</td>
-          <td> Gashugi Adeline </td>
-          <td> Lynda Smith </td>
-          <td> 1 </td>
-          <td> +250 788 695 515 </td>
-          <td> <i class="fas fa-sync-alt"></i> </td>
-          <td> <i class="fas fa-ellipsis-v"></i></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" /></td>
-          <td>25 April 2021</td>
-          <td> Gashugi Adeline </td>
-          <td> Lynda Smith </td>
-          <td> 1 </td>
-          <td> +250 788 695 515 </td>
-          <td> <i class="fas fa-check"></i> </td>
-          <td> <i class="fas fa-ellipsis-v"></i></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="notifications" *ngIf="showNotifications" >
-      <div class="top-not">
-        <span>Notifications</span>
-        <i class="fas fa-check" title="Mark all as read"></i>
-      </div>
-      <p> Richard wants a kid called Mugwaneza. </p>
-      <p> There was a login attempt on your account. </p>
-    </div>
+    <button>Last</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th> <input type="checkbox" /></th>
+        <th> Request Date</th>
+        <th> Person's Name </th>
+        <th> Child's Name </th>
+        <th> Number of kids </th>
+        <th> Phone Number </th>
+        <th> Status </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>25 April 2021</td>
+        <td> Gashugi Adeline </td>
+        <td> Lynda Smith </td>
+        <td> 1 </td>
+        <td> +250 788 695 515 </td>
+        <td> <i class="fas fa-check"></i> </td>
+        <td>
+          <div class="btn-group dropstart">
+            <a type="button" class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Complete</a></li>
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>25 April 2021</td>
+        <td> Gashugi Adeline </td>
+        <td> Lynda Smith </td>
+        <td> 1 </td>
+        <td> +250 788 695 515 </td>
+        <td> <i class="fas fa-sync-alt"></i> </td>
+        <td>
+          <div class="btn-group dropstart">
+            <a type="button" class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Complete</a></li>
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>25 April 2021</td>
+        <td> Gashugi Adeline </td>
+        <td> Lynda Smith </td>
+        <td> 1 </td>
+        <td> +250 788 695 515 </td>
+        <td> <i class="fas fa-check"></i> </td>
+        <td>
+          <div class="btn-group dropstart">
+            <a type="button" class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Complete</a></li>
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>25 April 2021</td>
+        <td> Gashugi Adeline </td>
+        <td> Lynda Smith </td>
+        <td> 1 </td>
+        <td> +250 788 695 515 </td>
+        <td> <i class="fas fa-sync-alt"></i> </td>
+        <td>
+          <div class="btn-group dropstart">
+            <a type="button" class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Complete</a></li>
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>25 April 2021</td>
+        <td> Gashugi Adeline </td>
+        <td> Lynda Smith </td>
+        <td> 1 </td>
+        <td> +250 788 695 515 </td>
+        <td> <i class="fas fa-sync-alt"></i> </td>
+        <td>
+          <div class="btn-group dropstart">
+            <a type="button" class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Complete</a></li>
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>25 April 2021</td>
+        <td> Gashugi Adeline </td>
+        <td> Lynda Smith </td>
+        <td> 1 </td>
+        <td> +250 788 695 515 </td>
+        <td> <i class="fas fa-check"></i> </td>
+        <td>
+          <div class="btn-group dropstart">
+            <a type="button" class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Complete</a></li>
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <div class="notifications" >
+    <p>Pending requests</p>
+    <p> Richard wants a kid called Mugwaneza. </p>
+    <p> There was a login attempt on your account. </p>
+    <p>View All</p>
+  </div> -->
 </main>
 <app-footer></app-footer>

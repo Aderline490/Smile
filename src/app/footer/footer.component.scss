@@ -61,6 +61,11 @@ div.newsletter{
         border: 0;
         font-size: 16px;
         padding-left: 10px;
+        &::placeholder{
+            font-weight: normal;
+            font-size: 14px;
+            color: lighten($color: #000000, $amount: 25%) ;
+        }
     }
     .fas{
         padding: 5px 7px;
@@ -69,11 +74,6 @@ div.newsletter{
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-    }
-    input::placeholder{
-        font-weight: normal;
-        font-size: 14px;
-        color: lighten($color: #000000, $amount: 25%) ;
     }
 }
 
