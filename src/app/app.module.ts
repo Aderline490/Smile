@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,6 +13,9 @@ import { DonateComponent } from './donate/donate.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterKidComponent } from './register-kid/register-kid.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { KidsComponent } from './kids/kids.component';
+import { KidComponent } from './kids/kid/kid.component';
+
 
 @NgModule({
   declarations: [
@@ -20,12 +26,15 @@ import { HomePageComponent } from './home-page/home-page.component';
     DonateComponent,
     DashboardComponent,
     RegisterKidComponent,
-    HomePageComponent
+    HomePageComponent,
+    KidsComponent,
+    KidComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

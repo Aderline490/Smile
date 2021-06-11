@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+}
+.card-image{
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    flex-direction: column;
+}
+figure{
+    border-radius: 30px;
+}
+.desc{
+    width: 40%;
+    padding: 20px;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.buts{
+    display: inline-block;
+    flex-direction: column;
+    width: 30%;
+}
+.buts>button{
+    display: block;
+    margin: 30px;
+}
+.desc p{
+    padding-top: 5px;
+}

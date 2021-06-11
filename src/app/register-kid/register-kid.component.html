@@ -11,19 +11,20 @@
 </div>
 <hr>
 <div class="form-row">
-    <form action="#" #registerKid="ngForm">
+    <form action="#" #registerKid="ngForm" (ngSubmit)="registerOrUpdate()">
         <div class="container">
             <div class="field">
+                <input type="hidden" name="_id" [(ngModel)]="kid._id">
                 <div>
-                    <label for="names" class="label">Names<span>*</span></label>
+                    <label for="name" class="label">Names<span>*</span></label>
                 </div>
                 <div>
                     <input 
                     type="text" 
                     class="text-line" 
                     id="names" 
-                    name="names"
-                    [(ngModel)]="names"
+                    name="name"
+                    [(ngModel)]="kid.name"
                     #namesInput="ngModel"
                     required>
 
@@ -41,8 +42,8 @@
                 <select
                 class="text-line"
                 id="gender"
-                name="gender"
-                [(ngModel)]="gender"
+                name="kid.gender"
+                [(ngModel)]="kid.gender"
                 #genderInput="ngModel"
                 required>
                     <option value=""></option>
@@ -60,12 +61,12 @@
                 <label for="dob" class="label">Date of Birth<span>*</span></label>
             </div>
             <div>
-                <input 
+                <input
                 type="date" 
                 class="text-line"
-                id="dob" 
+                id="dob"
                 name="dob"
-                [(ngModel)]="dob"
+                [(ngModel)]="kid.dob"
                 #dobInput="ngModel"
                 required>
 
@@ -83,7 +84,7 @@
                 class="text-line"
                 id="country"
                 name="country"
-                [(ngModel)]="country"
+                [(ngModel)]="kid.country"
                 #countryInput="ngModel"
                 required>
                     <option value=""></option>
@@ -101,10 +102,10 @@
         <div class="field">
             <label class="label" for="desc">Description<span>*</span></label>
             <textarea
-                name="desc"
+                name="description"
                 id="desc"
                 class="textarea" 
-                [(ngModel)]="desc"
+                [(ngModel)]="kid.description"
                 #descInput="ngModel"
                 required>
             </textarea>
@@ -115,7 +116,7 @@
         <div class="field">
             <button 
             type="submit"
-            class="button is-danger is-rounded is-link"
+            class="button is-danger is-link"
             [disabled]="registerKid.invalid">
            Register Kid</button>
         </div>

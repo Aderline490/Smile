@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 class="title is-2">List of Children</h2>
+    <hr style="height:2px;border-width:0;color:rgb(36, 36, 36);background-color:rgb(36, 36, 36); width:300px;"> 
+    Showing {{number}} of {{numbers}}
+    <a href="" class="is-link has-text-danger ml-5">Next</a>
+    <span class="icon">
+        <i class="fas fa-arrow-right has-text-danger ml-5"></i>
+      </span>
+    <hr style="height:2px;border-width:0;color:rgb(36, 36, 36);background-color:rgb(36, 36, 36); width:300px;"> 
+</div>
+
+
+<section class="section">
+    <div class="container">
+        <div class="column is-centered"  *ngIf="kids">
+            <!-- this async pipe is used to unwrap the observable and destroy it for us when the component is destroyed or when it unmounts. -->
+            <div class="column main" *ngFor="let kid of kids">
+                <div class="card-image">
+                    <figure class="image is-4by3 has-background-danger is-rounded">
+                      <img src="../../assets/images/1.png" alt="Child!">
+                    </figure>
+                  </div>
+                <div class="desc">
+                    <p>Name: {{kid.name}}</p>
+                    <p>Age:{{kid.dob}}</p>
+                    <p>Country:{{kid.country}}</p>
+                    <p>Gender:{{kid.gender}}</p>
+                    <p>Description:{{kid.description}}</p>
+                </div>
+                <div class="buts">
+                    <button class="button is-success" (click)="updateKid(kid)">Update</button>
+                    <button class="button is-danger" (click)="deleteKid(kid)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
