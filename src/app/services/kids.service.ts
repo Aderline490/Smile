@@ -11,7 +11,7 @@ export class KidsService {
   constructor(private http:HttpClient) { }
 
   registerKid(kid:Kid){
-    return this.http.post(this.baseUri+'/kids/registerKids',kid,{headers:this.headers});
+    return this.http.post(this.baseUri+'/kids/registerKid',kid,{headers:this.headers});
   }
   getKids(){
     // console.log(this.http.get(this.baseUri+'/kids',{headers:this.headers});)

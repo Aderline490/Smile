@@ -17,12 +17,15 @@ export class RegisterKidComponent implements OnInit {
   // // phone:string;
   // // email:string;
   // // amount:number;
-  public kid:Kid;
+  kid:Kid;
   constructor(private kidService:KidsService, private router:Router) { }
   
   ngOnInit(): void {
     this.kid = this.kidService.getter();
-    console.log(this.kid);
+    // console.log(this.kid);
+    if(this.kid == undefined){
+      this.kid = {} as any;
+    }
   }
   registerOrUpdate(){
     if(this.kid._id == undefined){

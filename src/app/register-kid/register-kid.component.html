@@ -14,7 +14,7 @@
     <form action="#" #registerKid="ngForm" (ngSubmit)="registerOrUpdate()">
         <div class="container">
             <div class="field">
-                <input type="hidden" name="_id" [(ngModel)]="kid._id">
+                <input type="hidden" name="_id" [(ngModel)]="kid._id" value="kid.id">
                 <div>
                     <label for="name" class="label">Names<span>*</span></label>
                 </div>
@@ -104,7 +104,7 @@
             <textarea
                 name="description"
                 id="desc"
-                class="textarea" 
+                class="textarea"
                 [(ngModel)]="kid.description"
                 #descInput="ngModel"
                 required>
