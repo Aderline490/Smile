@@ -21,7 +21,8 @@ export class KidsService {
     return this.http.get(this.baseUri+'/kids/'+id,{headers:this.headers});
   }
   updateKid(kid:Kid){
-    return this.http.put(this.baseUri+'/registerKid',kid,{headers:this.headers});
+    // console.log(kid._id);
+    return this.http.put(this.baseUri+'/kids/update',kid,{headers:this.headers});
   }
   deleteKid(id:string){
     return this.http.delete(this.baseUri+'/kids/'+id,{headers:this.headers})

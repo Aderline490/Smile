@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Kid } from '../models/Kids';
 import { KidsService } from '../services/kids.service';
 @Component({
@@ -18,14 +18,14 @@ export class RegisterKidComponent implements OnInit {
   // // email:string;
   // // amount:number;
   kid:Kid;
-  constructor(private kidService:KidsService, private router:Router) { }
+  constructor(private kidService:KidsService, private router:Router, private route:ActivatedRoute) { }
   
   ngOnInit(): void {
     this.kid = this.kidService.getter();
-    // console.log(this.kid);
     if(this.kid == undefined){
       this.kid = {} as any;
     }
+    console.log(this.kid._id);
   }
   registerOrUpdate(){
     if(this.kid._id == undefined){
@@ -50,5 +50,4 @@ export class RegisterKidComponent implements OnInit {
       })
     }
   }
-
 }

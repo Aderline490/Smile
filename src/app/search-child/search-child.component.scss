@@ -1,0 +1,87 @@
+#link,span{
+    text-decoration: none;
+    color: #FF0101;
+}
+.row{
+    margin: 3em 5em;
+}
+.form-row{
+    margin: 50px auto;
+    width: 40%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 50px #ccc;
+}
+.text-line {
+    background-color: transparent;
+    color: #000000;
+    outline: none;
+    width: 100%;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #3a3a3a 1px;
+    margin-bottom: 20px;
+}
+.field{
+    width: 100%;
+}
+.container{
+    padding: 50px;
+}
+label{
+    font-size: 17px;
+}
+textarea{
+    border: 1px solid rgb(79, 79, 79);
+    border-radius: 10px;
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+   color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+.help{
+    color: #FF0101;
+    margin-top: -10px;
+}
+.is-danger{
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    color: #ffff;
+    background-color: #FF0101;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.is-danger:hover{
+    background-color: white;
+    color: #FF0101;
+    border: 1px solid #FF0101;
+}
+.max,.min{
+    display: inline-block;
+}
+.max{
+    margin-left: 100px;
+}
+select{
+    width: 70px;
+    margin-bottom: 20px;
+}
+.search{
+    padding: 10px;
+}
+.update{
+    display: inline-block;
+}
+.select{
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+}

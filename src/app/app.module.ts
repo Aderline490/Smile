@@ -15,6 +15,7 @@ import { RegisterKidComponent } from './register-kid/register-kid.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { KidsComponent } from './kids/kids.component';
 import { KidComponent } from './kids/kid/kid.component';
+import { SearchChildComponent } from './search-child/search-child.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { KidComponent } from './kids/kid/kid.component';
     RegisterKidComponent,
     HomePageComponent,
     KidsComponent,
-    KidComponent
+    KidComponent,
+    SearchChildComponent
   ],
   imports: [
     BrowserModule,

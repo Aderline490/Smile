@@ -1,0 +1,127 @@
+<div class="row">
+    <h2 class="title is-3">Search for a Child</h2>
+    <p>Search our database of hundreds of children for adopting based on the criteria below. <br>
+        Fields with<span>*</span> are required</p>
+</div>
+<div class="row">
+<h5 class="title is-5">General Characteristics</h5>
+</div>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray; width:550px;margin-left:10px"> 
+
+<div class="form-row">
+    <form action="#" #searchKid="ngForm">
+        <div class="container">
+            <div class="field">
+                <input type="hidden" name="_id">
+            </div>
+        
+        <div class="field">
+            <div>
+                <label for="gender" class="label">Gender<span>*</span></label>
+            </div>
+            <div>
+                <select
+                class="text-line"
+                id="gender"
+                required>
+                    <option value=""></option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Custom">Custom</option>
+                </select>
+            </div>
+        </div>
+        <div class="field">
+            <label for="number" class="label">Number of kids you would accept<span>*</span></label>
+            <div class="min">
+                <div>
+                    <label for="minimum">Minimum</label>
+                </div>
+                <div>
+                    <select name="nbr" id="">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="max">
+                <div>
+                    <label for="minimum">Maximum</label>
+                </div>
+                <div>
+                    <select name="nbr" id="">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                    </select>
+                </div>
+            </div>
+        <div class="field">
+            <label for="number2" class="label">Age of kids you would accept<span>*</span></label>
+            <div class="min">
+                <div>
+                    <label for="minimum">Youngest</label>
+                </div>
+                <div>
+                    <select name="nbr" id="">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="max">
+                <div>
+                    <label for="minimum">Oldest</label>
+                </div>
+                <div>
+                    <select name="nbr" id="">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+            <div class="limit">
+                <label for="" class="label">Limit Search</label>
+                <hr style="height:1px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0); width:100%;"> 
+                <input type="checkbox" name="" id="">
+                <label for="" class="search">Search for children who can speak English</label>
+                <!-- <label for="" class="update">Search for children whose profile was updated within the last </label>
+                    <select name="" id="" class="update select">
+                    <option value=""></option>
+                    <option value="">Day</option>
+                    <option value="">Week</option>
+                    <option value="">Month</option>
+                    <option value="">2 Months</option>
+                    <option value="">3 Months</option>
+                    <option value="">4 Months</option>
+                    <option value="">5 Months</option>
+                    <option value="">6 Months</option>
+                    <option value="">Year</option>
+                </select> -->
+            </div>
+        </div>
+        <div class="field">
+            <button 
+            type="submit"
+            class="button is-danger is-link">
+           Search</button>
+        </div>
+    </div>
+    </form>
+</div>

@@ -4,10 +4,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { KidsComponent } from './kids/kids.component';
 import { RegisterKidComponent } from './register-kid/register-kid.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { SearchChildComponent } from './search-child/search-child.component';
 const routes: Routes = [
   {
     path:'',
     component: HomePageComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'search',
+    component: SearchChildComponent,
     pathMatch:'full'
   },
   {
